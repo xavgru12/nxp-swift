@@ -1,0 +1,24 @@
+pipelines:
+  pull-requests:
+    "**":
+    - step:
+        name: "clang format check"
+        image: atlassian/default-image:4 # Base image for Docker build
+        script:
+          - apt-get update && apt-get install -y clang-format
+          - git fetch origin main:main
+          - clang-format --version
+          - git clang-format main
+          - git diff > clang-format.diff
+          - if [ -s "clang-format.diff" ]; then echo "clang-format issues found!"; cat clang-format.diff; exit 1; fi
+  custom:
+    - step:
+      runs-on:
+        - self.hosted
+        - linux
+      name: "Build Yocto"
+      services:
+        - docker
+      script:
+        - ./build-docker.sh
+        - ./server-docker-run.sh server-yocto-build.sh

@@ -1,0 +1,25 @@
+{
+  "configurations": [
+    {
+      "type": "mcuxpresso-debug",
+      "name": "Debug project configuration",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+
+      "executable": "",
+      "stopAtSymbol": "main",
+      "probeSerialNumber": "51007883",
+      "isAttach": false,
+      "probeType": "SEGGER",
+      "skipBuildBeforeDebug": false,
+      "skipPreFlashActions": false,
+      "gdbServerTargetRemote": "10.10.80.103:2331",
+      "gdbInitCommands": [
+        "set remotetimeout 600",
+        "set debug-file-directory",
+        "set non-stop off"
+      ],
+      "showDevDebugOutput": "vscode"
+    }
+  ]
+}
