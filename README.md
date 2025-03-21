@@ -1,7 +1,5 @@
 # NXP Yocto evaluation
 
-Warning: This requires qt6 6.8.2 to be installed in $HOME. If you want to compile without the qt6 coffeemachine, remove "coffeemachine" from IMAGE_INSTALL:append in nxp/conf/local.conf.
-
 ## instructions
 
 ### optional: setup wsl
