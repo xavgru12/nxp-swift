@@ -46,3 +46,9 @@
 [submodule "sources/poky"]
 	path = sources/poky
 	url = https://git.yoctoproject.org/poky
+[submodule "sources/meta-swift-5-7"]
+	path = sources/meta-swift-5-7
+	url = git@github.com:jeremy-prater/meta-swift.git
+[submodule "sources/meta-swift-6-1"]
+	path = sources/meta-swift-6-1
+	url = git@github.com:PADL/meta-swift.git
